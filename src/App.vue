@@ -4,8 +4,10 @@ import { RouterView } from "vue-router";
 </script>
 
 <template>
-  <Header />
-  <div class="container mx-auto p-10">
-    <RouterView />
+  <div class="bg-white min-h-screen text-[#795218]">
+    <Header />
+    <div class="container mx-auto p-10">
+      <RouterView />
+    </div>
   </div>
 </template>
