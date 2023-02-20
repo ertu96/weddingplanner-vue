@@ -14,7 +14,16 @@
     </div>
 
     <p>Wir freuen uns auf euch!</p>
-    <div class="flex justify-center mt-5">
+    <div class="flex justify-center mt-4">
+      <RouterLink to="/schedule">
+        <button
+          class="btn rounded-sm btn-outline border border-[#795218] text-[#795218] hover:bg-[#795218] hover:text-white hover:border-[#795218] mt-4"
+        >
+          Programmablauf
+        </button>
+      </RouterLink>
+    </div>
+    <div class="flex justify-center mt-4">
       <RouterLink to="/sign">
         <button
           class="btn rounded-sm btn-outline border border-[#795218] text-[#795218] hover:bg-[#795218] hover:text-white hover:border-[#795218] mt-4"

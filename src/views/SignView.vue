@@ -1,10 +1,70 @@
+<script lang="ts">
+import validate from "@/helpers/validator";
+import { defineComponent } from "vue";
+
+export default defineComponent({
+  name: "SignView",
+  data: () => ({
+    form: {
+      name: "",
+      email: "",
+      isComing: true,
+      additionalGuests: 0,
+      comment: "",
+      passcode: "",
+    },
+  }),
+  methods: {
+    addAddtionalGuest() {
+      this.form.additionalGuests++;
+    },
+    removeAdditionalGuest() {
+      if (this.form.additionalGuests > 0) this.form.additionalGuests--;
+    },
+    async submit(e: Event) {
+      e.preventDefault();
+      const formValidation = validate(this.form);
+      if (formValidation.length) {
+        alert(formValidation);
+        return;
+      }
+      const response = await fetch("/api/guest", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(this.form),
+      });
+      if (response.ok) {
+        alert("Danke für deine Antwort!");
+        this.form = {
+          name: "",
+          email: "",
+          isComing: true,
+          additionalGuests: 0,
+          comment: "",
+          passcode: "",
+        };
+      } else {
+        alert("Da ist etwas schief gelaufen. Bitte versuche es erneut.");
+      }
+    },
+  },
+});
+</script>
+
 <template>
-  <form class="max-w-md mx-auto flex flex-col items-center gap-2" action="">
+  <form
+    class="mx-auto flex flex-col items-center gap-2"
+    :onSubmit="submit"
+    action=""
+  >
     <div class="form-control w-full">
       <label class="label">
         <span class="label-text text-[#795218]">Name</span>
       </label>
       <input
+        v-model.lazy="form.name"
         type="text"
         class="input input-bordered w-full bg-white rounded-sm"
       />
@@ -14,6 +74,7 @@
         <span class="label-text text-[#795218]">E-Mail</span>
       </label>
       <input
+        v-model.lazy.trim="form.email"
         type="text"
         class="input input-bordered w-full bg-white rounded-sm"
       />
@@ -25,10 +86,11 @@
       <ul class="grid w-full grid-cols-2">
         <li>
           <input
+            v-model.lazy="form.isComing"
             type="radio"
             id="yes"
             name="isComing"
-            value="yes"
+            value="true"
             class="hidden peer"
             required
           />
@@ -43,10 +105,11 @@
         </li>
         <li>
           <input
+            v-model.lazy="form.isComing"
             type="radio"
             id="no"
             name="isComing"
-            value="yes"
+            value="false"
             class="hidden peer"
           />
           <label
@@ -60,20 +123,42 @@
         </li>
       </ul>
     </div>
-    <div class="form-control w-full">
+
+    <div class="form-control w-full" v-if="form.isComing !== 'false'">
       <label class="label">
         <span class="label-text text-[#795218]">Weitere Personen</span>
       </label>
-      <input
-        type="text"
-        class="input input-bordered w-full bg-white rounded-sm"
-      />
+      <div class="flex justify-between gap-2">
+        <button
+          :class="`btn btn-square btn-outline rounded-sm ${
+            form.additionalGuests === 0 ? 'btn-disabled' : ''
+          }`"
+          type="button"
+          @click="removeAdditionalGuest"
+        >
+          -
+        </button>
+        <input
+          v-model.lazy.number="form.additionalGuests"
+          type="text"
+          class="input input-bordered w-full bg-white rounded-sm"
+        />
+        <button
+          class="btn btn-square btn-outline rounded-sm"
+          type="button"
+          @click="addAddtionalGuest"
+        >
+          +
+        </button>
+      </div>
     </div>
+
     <div class="form-control w-full">
       <label class="label">
         <span class="label-text text-[#795218]">Bemerkung</span>
       </label>
       <textarea
+        v-model.lazy="form.comment"
         class="textarea textarea-bordered h-24 bg-white rounded-sm"
       ></textarea>
     </div>
@@ -82,6 +167,7 @@
         <span class="label-text text-[#795218]">Passcode</span>
       </label>
       <input
+        v-model.lazy="form.passcode"
         type="text"
         class="input input-bordered w-full bg-white rounded-sm"
       />

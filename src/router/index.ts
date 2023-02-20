@@ -14,6 +14,11 @@ const router = createRouter({
       name: "sign",
       component: () => import("@/views/SignView.vue"),
     },
+    {
+      path: "/schedule",
+      name: "schedule",
+      component: () => import("@/views/ScheduleView.vue"),
+    },
   ],
 });
 
