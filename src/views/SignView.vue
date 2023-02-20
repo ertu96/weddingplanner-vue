@@ -1,10 +1,12 @@
 <script lang="ts">
 import validate from "@/helpers/validator";
+import axios from "axios";
 import { defineComponent } from "vue";
 
 export default defineComponent({
   name: "SignView",
   data: () => ({
+    isLoading: false,
     form: {
       name: "",
       email: "",
@@ -23,19 +25,14 @@ export default defineComponent({
     },
     async submit(e: Event) {
       e.preventDefault();
+      this.isLoading = true;
       const formValidation = validate(this.form);
       if (formValidation.length) {
         alert(formValidation);
         return;
       }
-      const response = await fetch("/api/guest", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(this.form),
-      });
-      if (response.ok) {
+      try {
+        await axios.post("/api/guest", this.form);
         alert("Danke für deine Antwort!");
         this.form = {
           name: "",
@@ -45,8 +42,10 @@ export default defineComponent({
           comment: "",
           passcode: "",
         };
-      } else {
-        alert("Da ist etwas schief gelaufen. Bitte versuche es erneut.");
+      } catch (error) {
+        alert(error.response.data.message);
+      } finally {
+        this.isLoading = false;
       }
     },
   },
@@ -169,12 +168,15 @@ export default defineComponent({
       <input
         v-model.lazy="form.passcode"
         type="text"
+        placeholder="steht auf der Einladung"
         class="input input-bordered w-full bg-white rounded-sm"
       />
     </div>
     <button
       type="submit"
-      class="btn mt-4 btn-block rounded-sm btn-outline border border-[#795218] text-[#795218] hover:bg-[#795218] hover:text-white hover:border-[#795218]"
+      :class="`${
+        isLoading ? 'loading' : ''
+      } btn mt-4 btn-block rounded-sm btn-outline border border-[#795218] text-[#795218] hover:bg-[#795218] hover:text-white hover:border-[#795218]`"
     >
       Abschicken
     </button>
