@@ -98,7 +98,7 @@ export default defineComponent({
             class="inline-flex justify-center items-center w-full p-4 bg-white border border-[#795218] rounded-sm cursor-pointer peer-checked:border-[#795218] peer-checked:text-white peer-checked:bg-[#795218] hover:text-gray-600 hover:bg-gray-100"
           >
             <div class="block">
-              <div class="w-full font-semibold">Ja</div>
+              <div class="w-full font-semibold uppercase">Ja</div>
             </div>
           </label>
         </li>
@@ -116,7 +116,7 @@ export default defineComponent({
             class="inline-flex justify-center items-center w-full p-4 bg-white border border-[#795218] rounded-sm cursor-pointer peer-checked:border-[#795218] peer-checked:text-white peer-checked:bg-[#795218] hover:text-gray-600 hover:bg-gray-100"
           >
             <div class="block">
-              <div class="w-full font-semibold">Nein</div>
+              <div class="w-full font-semibold uppercase">Nein</div>
             </div>
           </label>
         </li>

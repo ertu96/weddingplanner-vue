@@ -50,8 +50,8 @@ export default defineComponent({
       :key="index"
       class="flex justify-between"
     >
-      <div>{{ scheduleItem.time }}</div>
-      <div>{{ scheduleItem.title }}</div>
+      <p>{{ scheduleItem.time }}</p>
+      <p>{{ scheduleItem.title }}</p>
     </li>
   </ul>
 </template>

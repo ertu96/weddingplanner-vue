@@ -1,3 +1,20 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@import url("https://fonts.googleapis.com/css2?family=Golos+Text&family=Playfair+Display&display=swap");
+
+body {
+  font-family: "Playfair Display", serif;
+  background-image: url(./gettyimages.jpg);
+  background-color: #cccccc;
+}
+
+p,
+span {
+  font-family: "Golos Text", sans-serif;
+}
+
+h1 {
+  text-transform: uppercase;
+}
