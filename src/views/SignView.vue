@@ -10,7 +10,7 @@ export default defineComponent({
     form: {
       name: "",
       email: "",
-      isComing: true,
+      isAttending: true,
       additionalGuests: 0,
       comment: "",
       passcode: "",
@@ -25,19 +25,25 @@ export default defineComponent({
     },
     async submit(e: Event) {
       e.preventDefault();
-      this.isLoading = true;
       const formValidation = validate(this.form);
       if (formValidation.length) {
         alert(formValidation);
         return;
       }
+      this.isLoading = true;
       try {
-        await axios.post("/api/guest", this.form);
+        await axios.post("/api/guest", {
+          name: this.form.name,
+          email: this.form.email,
+          isAttending: this.form.isAttending,
+          additionalGuests: this.form.additionalGuests,
+          comment: this.form.comment,
+        });
         alert("Danke für deine Antwort!");
         this.form = {
           name: "",
           email: "",
-          isComing: true,
+          isAttending: true,
           additionalGuests: 0,
           comment: "",
           passcode: "",
@@ -85,10 +91,10 @@ export default defineComponent({
       <ul class="grid w-full grid-cols-2">
         <li>
           <input
-            v-model.lazy="form.isComing"
+            v-model.lazy="form.isAttending"
             type="radio"
             id="yes"
-            name="isComing"
+            name="isAttending"
             value="true"
             class="hidden peer"
             required
@@ -104,10 +110,10 @@ export default defineComponent({
         </li>
         <li>
           <input
-            v-model.lazy="form.isComing"
+            v-model.lazy="form.isAttending"
             type="radio"
             id="no"
-            name="isComing"
+            name="isAttending"
             value="false"
             class="hidden peer"
           />
@@ -123,7 +129,7 @@ export default defineComponent({
       </ul>
     </div>
 
-    <div class="form-control w-full" v-if="form.isComing !== 'false'">
+    <div class="form-control w-full" v-if="form.isAttending !== 'false'">
       <label class="label">
         <span class="label-text text-[#795218]">Weitere Personen</span>
       </label>

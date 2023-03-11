@@ -16,7 +16,7 @@ const validate = (form: Form): string => {
   if (form.additionalGuests < 0) {
     return "Bitte angeben, ob weitere Personen kommen werden";
   }
-  if (form.passcode !== "1234") {
+  if (form.passcode !== import.meta.env.VITE_PASSCODE) {
     return "Bitte Passcode kontrollieren";
   }
   return "";
