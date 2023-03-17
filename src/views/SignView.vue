@@ -10,7 +10,7 @@ export default defineComponent({
     form: {
       name: "",
       email: "",
-      isAttending: true,
+      isAttending: true as boolean | "false" | "true",
       additionalGuests: 0,
       comment: "",
       passcode: "",
@@ -48,7 +48,7 @@ export default defineComponent({
           comment: "",
           passcode: "",
         };
-      } catch (error) {
+      } catch (error: any) {
         alert(error.response.data.message);
       } finally {
         this.isLoading = false;
