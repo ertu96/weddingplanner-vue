@@ -32,13 +32,16 @@ export default defineComponent({
       }
       this.isLoading = true;
       try {
-        await axios.post("/api/guest", {
-          name: this.form.name,
-          email: this.form.email,
-          isAttending: this.form.isAttending,
-          additionalGuests: this.form.additionalGuests,
-          comment: this.form.comment,
-        });
+        await axios.post(
+          "https://weddingplaner-production.up.railway.app/api/guest",
+          {
+            name: this.form.name,
+            email: this.form.email,
+            isAttending: this.form.isAttending,
+            additionalGuests: this.form.additionalGuests,
+            comment: this.form.comment,
+          }
+        );
         alert("Danke für deine Antwort!");
         this.form = {
           name: "",
