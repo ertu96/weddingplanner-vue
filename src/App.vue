@@ -1,8 +1,6 @@
 <script setup lang="ts">
 import Header from "@/components/layout/Header.vue";
 import { RouterView } from "vue-router";
-
-console.log(import.meta.env.VITE_API_URL);
 </script>
 
 <template>

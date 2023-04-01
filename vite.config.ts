@@ -2,11 +2,9 @@ import { fileURLToPath, URL } from "node:url";
 
 import vue from "@vitejs/plugin-vue";
 import vueJsx from "@vitejs/plugin-vue-jsx";
-import { defineConfig, loadEnv } from "vite";
+import { defineConfig } from "vite";
 
-export default defineConfig(({ mode }) => {
-  const env = loadEnv(mode, process.cwd(), "");
-
+export default defineConfig(() => {
   return {
     plugins: [vue(), vueJsx()],
     resolve: {
@@ -15,13 +13,5 @@ export default defineConfig(({ mode }) => {
       },
     },
     envDir: "./env",
-    server: {
-      proxy: {
-        "/api": {
-          target: env.VITE_API_URL,
-          changeOrigin: true,
-        },
-      },
-    },
   };
 });
