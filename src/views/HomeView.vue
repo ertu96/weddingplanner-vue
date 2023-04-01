@@ -17,7 +17,7 @@
     <div class="flex justify-between mt-10">
       <RouterLink to="/schedule">
         <button
-          class="btn rounded-sm btn-ghost border-t border-t-[#795218] text-[#795218] hover:bg-[#795218] hover:text-white hover:border-[#795218] mt-4"
+          class="btn px-2 rounded-sm btn-ghost border-t border-t-[#795218] text-[#795218] hover:bg-[#795218] hover:text-white hover:border-[#795218] mt-4"
         >
           Programmablauf
         </button>
@@ -25,7 +25,7 @@
 
       <RouterLink to="/sign">
         <button
-          class="btn rounded-sm btn-ghost border-t border-t-[#795218] text-[#795218] hover:bg-[#795218] hover:text-white hover:border-[#795218] mt-4"
+          class="btn px-2 rounded-sm btn-ghost border-t border-t-[#795218] text-[#795218] hover:bg-[#795218] hover:text-white hover:border-[#795218] mt-4"
         >
           Absagen/Zusagen
         </button>

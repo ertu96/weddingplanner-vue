@@ -1,10 +1,15 @@
 <script lang="ts">
 import validate from "@/helpers/validator";
+import { useSystemStore } from "@/stores/SystemStore";
 import axios from "axios";
+import { mapStores } from "pinia";
 import { defineComponent } from "vue";
 
 export default defineComponent({
   name: "SignView",
+  computed: {
+    ...mapStores(useSystemStore),
+  },
   data: () => ({
     isLoading: false,
     form: {
@@ -27,7 +32,11 @@ export default defineComponent({
       e.preventDefault();
       const formValidation = validate(this.form);
       if (formValidation.length) {
-        alert(formValidation);
+        this.systemStore.setDialog({
+          visible: true,
+          title: "",
+          content: formValidation,
+        });
         return;
       }
       this.isLoading = true;
@@ -39,7 +48,11 @@ export default defineComponent({
           additionalGuests: this.form.additionalGuests,
           comment: this.form.comment,
         });
-        alert("Danke für deine Antwort!");
+        this.systemStore.setDialog({
+          visible: true,
+          title: "Danke für deine Antwort!",
+          content: "Du erhälst in Kürze eine E-Mail",
+        });
         this.form = {
           name: "",
           email: "",
@@ -49,7 +62,11 @@ export default defineComponent({
           passcode: "",
         };
       } catch (error: any) {
-        alert(error.response.data.message);
+        this.systemStore.setDialog({
+          visible: true,
+          title: "",
+          content: error.response.data.message,
+        });
       } finally {
         this.isLoading = false;
       }
@@ -165,6 +182,7 @@ export default defineComponent({
       <textarea
         v-model.lazy="form.comment"
         class="textarea textarea-bordered h-24 bg-white rounded-sm"
+        placeholder="Optional"
       ></textarea>
     </div>
     <div class="form-control w-full">
