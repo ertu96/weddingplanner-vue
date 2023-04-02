@@ -65,7 +65,7 @@ export default defineComponent({
         this.systemStore.setDialog({
           visible: true,
           title: "",
-          content: error.response.data.message,
+          content: error.response ? error.response.data.message : "Fehler",
         });
       } finally {
         this.isLoading = false;
@@ -152,8 +152,10 @@ export default defineComponent({
       </label>
       <div class="flex justify-between gap-2">
         <button
-          :class="`btn btn-square btn-outline rounded-sm ${
-            form.additionalGuests === 0 ? 'btn-disabled' : ''
+          :class="`btn btn-square btn-outline rounded-sm   text-lg  ${
+            form.additionalGuests === 0
+              ? 'btn-disabled'
+              : 'border-[#795218] text-[#795218] hover:bg-[#795218] hover:text-white hover:border-[#795218]'
           }`"
           type="button"
           @click="removeAdditionalGuest"
@@ -166,7 +168,7 @@ export default defineComponent({
           class="input input-bordered w-full bg-white rounded-sm"
         />
         <button
-          class="btn btn-square btn-outline rounded-sm"
+          class="btn btn-square btn-outline rounded-sm border-[#795218] text-[#795218] hover:bg-[#795218] hover:text-white hover:border-[#795218] text-lg"
           type="button"
           @click="addAddtionalGuest"
         >

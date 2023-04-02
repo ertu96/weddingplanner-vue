@@ -6,7 +6,9 @@
 
 body {
   font-family: "Playfair Display", serif;
-  background-image: url(./gettyimages.jpg);
+  background-image: url("./collage.png");
+  background-repeat: no-repeat;
+  background-size: cover;
   background-color: #cccccc;
 }
 

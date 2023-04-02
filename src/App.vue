@@ -1,15 +1,17 @@
 <script setup lang="ts">
-import Dialog from "@/components/Dialog.vue";
-import Header from "@/components/layout/Header.vue";
+import Navbar from "@/components/layout/Navbar.vue";
 import { RouterView } from "vue-router";
+import BasicDialogVue from "./components/dialogs/BasicDialog.vue";
 </script>
 
 <template>
-  <div class="bg-white min-h-screen text-[#795218] tracking-wide">
-    <Header />
-    <div class="container mx-auto py-10 md:max-w-md max-w-xs">
+  <div class="min-h-screen text-[#795218] tracking-[.01em]">
+    <Navbar />
+    <main
+      class="container mx-auto my-10 p-8 backdrop-blur-xl shadow rounded-sm bg-white/70 md:max-w-md max-w-xs"
+    >
       <RouterView />
-    </div>
-    <Dialog />
+    </main>
+    <BasicDialogVue />
   </div>
 </template>

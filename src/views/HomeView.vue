@@ -14,10 +14,10 @@
     </div>
 
     <p>Wir freuen uns auf euch!</p>
-    <div class="flex justify-between mt-10">
+    <div class="flex flex-col gap-4 items-center justify-between mt-5">
       <RouterLink to="/schedule">
         <button
-          class="btn px-2 rounded-sm btn-ghost border-t border-t-[#795218] text-[#795218] hover:bg-[#795218] hover:text-white hover:border-[#795218] mt-4"
+          class="btn rounded-sm btn-ghost border border-[#795218] text-[#795218] hover:bg-[#795218] hover:text-white hover:border-[#795218]"
         >
           Programmablauf
         </button>
@@ -25,7 +25,7 @@
 
       <RouterLink to="/sign">
         <button
-          class="btn px-2 rounded-sm btn-ghost border-t border-t-[#795218] text-[#795218] hover:bg-[#795218] hover:text-white hover:border-[#795218] mt-4"
+          class="btn rounded-sm btn-ghost border border-[#795218] text-[#795218] hover:bg-[#795218] hover:text-white hover:border-[#795218]"
         >
           Absagen/Zusagen
         </button>
