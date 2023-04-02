@@ -2,7 +2,7 @@ export const messages = {
   tr: {
     home: {
       greeting:
-        "Merhaba, evleniyoruz ve düğünümüze davetlisiniz. Lütfen katılabilirseniz bize bildirin.\n",
+        "Merhaba,\nevleniyoruz ve düğünümüze davetlisiniz.\nLütfen katılabilirseniz bize bildirin.\n",
       datetime: "11.06.2023 tarihinde saat 17:00'de",
       hopeToSeeYou: "orada görüşmek üzere!",
       buttons: {
@@ -32,7 +32,7 @@ export const messages = {
   ru: {
     home: {
       greeting:
-        "Привет, мы собираемся выйти замуж и хотели бы пригласить вас на наш свадебный банкет. Пожалуйста, дайте нам знать, сможете ли вы прийти.\n",
+        "Привет,\nмы собираемся выйти замуж и хотели бы пригласить вас на наш свадебный банкет.\nПожалуйста, дайте нам знать, сможете ли вы прийти.\n",
       datetime: "11.06.2023 в 17:00",
       hopeToSeeYou: "Мы надеемся увидеть вас там!",
       buttons: {
@@ -62,7 +62,7 @@ export const messages = {
   jp: {
     home: {
       greeting:
-        "こんにちは、私たちは結婚し、私たちの結婚式に招待したいと思います。あなたがそれをすることができるかどうかを教えてください。\n",
+        "こんにちは、\n私たちは結婚し、私たちの結婚式に招待したいと思います。\nあなたがそれをすることができるかどうかを教えてください。\n",
       datetime: "2023年6月11日午後5時",
       hopeToSeeYou: "あなたがそこにいることを願っています！",
       buttons: {
@@ -92,7 +92,7 @@ export const messages = {
   gb: {
     home: {
       greeting:
-        "Hi, we are getting married and would like to invite you to our wedding. Please let us know if you can make it.\n",
+        "Hi,\nwe are getting married and would like to invite you to our wedding.\nPlease let us know if you can make it.\n",
       datetime: "on 11.06.2023 at 5 PM",
       hopeToSeeYou: "We hope to see you there!",
       buttons: {
