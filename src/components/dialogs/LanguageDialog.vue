@@ -56,7 +56,7 @@ export default defineComponent({
   />
   <div class="modal">
     <div
-      class="modal-box relative h-[100vh] bg-black/60 backdrop-blur-lg rounded-sm text-primary-content"
+      class="modal-box relative h-[100vh] bg-black/50 backdrop-blur-2xl rounded-sm text-primary-content"
     >
       <label
         for="language-modal"

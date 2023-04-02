@@ -22,7 +22,7 @@ export default defineComponent({
   />
   <div class="modal modal-bottom sm:modal-middle">
     <div
-      class="modal-box bg-black/80 backdrop-blur-xl rounded-t-md text-base-content"
+      class="modal-box bg-black/70 backdrop-blur-2xl rounded-t-md text-base-content"
     >
       <h3 class="font-bold text-lg text-center">
         {{ systemStore.getDialog.title }}

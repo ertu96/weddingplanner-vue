@@ -18,7 +18,7 @@ export default defineComponent({
 
 <template>
   <header
-    class="py-4 bg-white/90 backdrop-blur shadow-sm flex justify-between items-center px-4"
+    class="py-4 bg-white/60 backdrop-blur-xl shadow-sm flex justify-between items-center px-4"
   >
     <div class="w-[26px]" />
     <RouterLink to="/">
