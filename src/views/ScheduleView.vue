@@ -43,7 +43,7 @@ export default defineComponent({
 </script>
 
 <template>
-  <h1 class="text-center text-2xl mb-6">Programmablauf</h1>
+  <h1 class="text-center text-2xl mb-6">{{ $t("home.buttons.schedule") }}</h1>
   <ul>
     <li
       v-for="(scheduleItem, index) in schedule"

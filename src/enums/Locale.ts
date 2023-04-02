@@ -2,6 +2,6 @@ export enum Locale {
   TR = "tr",
   RU = "ru",
   JP = "jp",
-  EN = "en",
+  GB = "gb",
   DE = "de",
 }

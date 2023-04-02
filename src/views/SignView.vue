@@ -30,7 +30,7 @@ export default defineComponent({
     },
     async submit(e: Event) {
       e.preventDefault();
-      const formValidation = validate(this.form);
+      const formValidation = validate(this.form, this.systemStore.getLocale);
       if (formValidation.length) {
         this.systemStore.setDialog({
           visible: true,
@@ -83,7 +83,7 @@ export default defineComponent({
   >
     <div class="form-control w-full">
       <label class="label">
-        <span class="label-text text-[#795218]">Name</span>
+        <span class="label-text text-[#795218]">{{ $t("form.name") }}*</span>
       </label>
       <input
         v-model.lazy="form.name"
@@ -93,7 +93,7 @@ export default defineComponent({
     </div>
     <div class="form-control w-full">
       <label class="label">
-        <span class="label-text text-[#795218]">E-Mail</span>
+        <span class="label-text text-[#795218]">{{ $t("form.email") }}*</span>
       </label>
       <input
         v-model.lazy.trim="form.email"
@@ -103,7 +103,7 @@ export default defineComponent({
     </div>
     <div class="form-control w-full">
       <label class="label">
-        <span class="label-text text-[#795218]">Zusage</span>
+        <span class="label-text text-[#795218]">{{ $t("form.rsvp") }}*</span>
       </label>
       <ul class="grid w-full grid-cols-2">
         <li>
@@ -121,7 +121,9 @@ export default defineComponent({
             class="inline-flex justify-center items-center w-full p-4 bg-white border border-[#795218] rounded-sm cursor-pointer peer-checked:border-[#795218] peer-checked:text-white peer-checked:bg-[#795218] hover:text-gray-600 hover:bg-gray-100"
           >
             <div class="block">
-              <div class="w-full font-semibold uppercase">Ja</div>
+              <div class="w-full font-semibold uppercase">
+                {{ $t("form.yes") }}
+              </div>
             </div>
           </label>
         </li>
@@ -139,7 +141,9 @@ export default defineComponent({
             class="inline-flex justify-center items-center w-full p-4 bg-white border border-[#795218] rounded-sm cursor-pointer peer-checked:border-[#795218] peer-checked:text-white peer-checked:bg-[#795218] hover:text-gray-600 hover:bg-gray-100"
           >
             <div class="block">
-              <div class="w-full font-semibold uppercase">Nein</div>
+              <div class="w-full font-semibold uppercase">
+                {{ $t("form.no") }}
+              </div>
             </div>
           </label>
         </li>
@@ -148,7 +152,9 @@ export default defineComponent({
 
     <div class="form-control w-full" v-if="form.isAttending !== 'false'">
       <label class="label">
-        <span class="label-text text-[#795218]">Weitere Personen</span>
+        <span class="label-text text-[#795218]"
+          >{{ $t("form.additionalGuest") }}*</span
+        >
       </label>
       <div class="flex justify-between gap-2">
         <button
@@ -179,22 +185,21 @@ export default defineComponent({
 
     <div class="form-control w-full">
       <label class="label">
-        <span class="label-text text-[#795218]">Bemerkung</span>
+        <span class="label-text text-[#795218]">{{ $t("form.comment") }}</span>
       </label>
       <textarea
         v-model.lazy="form.comment"
         class="textarea textarea-bordered h-24 bg-white rounded-sm"
-        placeholder="Optional"
       ></textarea>
     </div>
     <div class="form-control w-full">
       <label class="label">
-        <span class="label-text text-[#795218]">Passcode</span>
+        <span class="label-text text-[#795218]">Passcode*</span>
       </label>
       <input
         v-model.lazy="form.passcode"
         type="text"
-        placeholder="steht auf der Einladung"
+        :placeholder="$t('form.checkInvitation')"
         class="input input-bordered w-full bg-white rounded-sm"
       />
     </div>
@@ -204,7 +209,7 @@ export default defineComponent({
         isLoading ? 'loading' : ''
       } btn mt-4 btn-block rounded-sm btn-outline border border-[#795218] text-[#795218] hover:bg-[#795218] hover:text-white hover:border-[#795218]`"
     >
-      Abschicken
+      {{ $t("form.submit") }}
     </button>
   </form>
 </template>

@@ -28,7 +28,7 @@ export default defineComponent({
         flag: JapanFlag,
       },
       {
-        id: Locale.EN,
+        id: Locale.GB,
         country: "English",
         flag: GreatBritainFlag,
       },

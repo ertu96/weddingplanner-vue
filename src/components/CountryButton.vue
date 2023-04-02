@@ -26,6 +26,7 @@ export default defineComponent({
   methods: {
     changeLanguage() {
       this.systemStore.setLocale(this.locale);
+      this.$i18n.locale = this.locale;
     },
   },
 });
