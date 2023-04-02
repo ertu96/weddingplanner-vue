@@ -42,7 +42,9 @@ export default defineComponent({
   }),
   components: { CountryButton },
   mounted() {
-    this.open = true;
+    setTimeout(() => {
+      this.open = true;
+    }, 3000);
   },
 });
 </script>
