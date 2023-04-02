@@ -11,6 +11,7 @@ import TurkiyeFlag from "/icons/tr.svg";
 export default defineComponent({
   name: "LanguageDialog",
   data: () => ({
+    open: false,
     languages: [
       {
         id: Locale.TR,
@@ -39,16 +40,23 @@ export default defineComponent({
       },
     ],
   }),
-  methods: {},
   components: { CountryButton },
+  mounted() {
+    this.open = true;
+  },
 });
 </script>
 
 <template>
-  <input type="checkbox" id="language-modal" class="modal-toggle" />
+  <input
+    type="checkbox"
+    id="language-modal"
+    class="modal-toggle"
+    v-model="open"
+  />
   <div class="modal">
     <div
-      class="modal-box relative h-[100vh] bg-black/80 backdrop-blur-xl rounded-sm text-primary"
+      class="modal-box relative h-[100vh] bg-black/60 backdrop-blur-lg rounded-sm text-primary-content"
     >
       <label
         for="language-modal"

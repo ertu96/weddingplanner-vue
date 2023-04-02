@@ -12,21 +12,27 @@
     </div>
     <p>{{ $t("home.hopeToSeeYou") }}</p>
     <div class="flex flex-col gap-4 items-center justify-between mt-5">
-      <RouterLink to="/schedule">
-        <button
-          class="btn rounded-sm btn-ghost border border-[#795218] text-[#795218] hover:bg-[#795218] hover:text-white hover:border-[#795218]"
-        >
-          <p>{{ $t("home.buttons.schedule") }}</p>
-        </button>
+      <RouterLink
+        to="/schedule"
+        class="btn rounded-sm btn-ghost border border-stone-900 text-stone-900 hover:bg-stone-900 hover:text-white hover:border-stone-900 btn-block capitalize"
+      >
+        {{ $t("home.buttons.schedule") }}
       </RouterLink>
 
-      <RouterLink to="/sign">
-        <button
-          class="btn rounded-sm btn-ghost border border-[#795218] text-[#795218] hover:bg-[#795218] hover:text-white hover:border-[#795218]"
-        >
-          <p>{{ $t("home.buttons.rsvp") }}</p>
-        </button>
+      <RouterLink
+        to="/sign"
+        class="btn rounded-sm btn-ghost border border-stone-900 text-stone-900 hover:bg-stone-900 hover:text-white hover:border-stone-900 btn-block capitalize"
+      >
+        {{ $t("home.buttons.rsvp") }}
       </RouterLink>
+      <a
+        href="https://drive.g"
+        target="_blank"
+        rel="noreferrer"
+        class="btn rounded-sm btn-ghost border border-stone-900 text-stone-900 hover:bg-stone-900 hover:text-white hover:border-stone-900 btn-block capitalize"
+      >
+        Google Drive
+      </a>
     </div>
   </div>
 </template>

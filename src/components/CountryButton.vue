@@ -34,7 +34,7 @@ export default defineComponent({
 
 <template>
   <label for="language-modal" @click="changeLanguage">
-    <img :src="flag" :alt="country" />
+    <img :src="flag" :alt="country" class="rounded-sm" />
     <p class="text-center mt-1">{{ country }}</p>
   </label>
 </template>

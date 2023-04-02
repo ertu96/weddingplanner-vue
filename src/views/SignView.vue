@@ -83,7 +83,7 @@ export default defineComponent({
   >
     <div class="form-control w-full">
       <label class="label">
-        <span class="label-text text-[#795218]">{{ $t("form.name") }}*</span>
+        <span class="label-text text-stone-900">{{ $t("form.name") }}*</span>
       </label>
       <input
         v-model.lazy="form.name"
@@ -93,7 +93,7 @@ export default defineComponent({
     </div>
     <div class="form-control w-full">
       <label class="label">
-        <span class="label-text text-[#795218]">{{ $t("form.email") }}*</span>
+        <span class="label-text text-stone-900">{{ $t("form.email") }}*</span>
       </label>
       <input
         v-model.lazy.trim="form.email"
@@ -103,7 +103,7 @@ export default defineComponent({
     </div>
     <div class="form-control w-full">
       <label class="label">
-        <span class="label-text text-[#795218]">{{ $t("form.rsvp") }}*</span>
+        <span class="label-text text-stone-900">{{ $t("form.rsvp") }}*</span>
       </label>
       <ul class="grid w-full grid-cols-2">
         <li>
@@ -118,10 +118,10 @@ export default defineComponent({
           />
           <label
             for="yes"
-            class="inline-flex justify-center items-center w-full p-4 bg-white border border-[#795218] rounded-sm cursor-pointer peer-checked:border-[#795218] peer-checked:text-white peer-checked:bg-[#795218] hover:text-gray-600 hover:bg-gray-100"
+            class="inline-flex justify-center items-center w-full p-4 bg-white border border-stone-900 rounded-sm cursor-pointer peer-checked:border-stone-900 peer-checked:text-white peer-checked:bg-stone-900 hover:text-gray-600 hover:bg-gray-100"
           >
             <div class="block">
-              <div class="w-full font-semibold uppercase">
+              <div class="w-full font-semibold capitalize">
                 {{ $t("form.yes") }}
               </div>
             </div>
@@ -138,10 +138,10 @@ export default defineComponent({
           />
           <label
             for="no"
-            class="inline-flex justify-center items-center w-full p-4 bg-white border border-[#795218] rounded-sm cursor-pointer peer-checked:border-[#795218] peer-checked:text-white peer-checked:bg-[#795218] hover:text-gray-600 hover:bg-gray-100"
+            class="inline-flex justify-center items-center w-full p-4 bg-white border border-stone-900 rounded-sm cursor-pointer peer-checked:border-stone-900 peer-checked:text-white peer-checked:bg-stone-900 hover:text-gray-600 hover:bg-gray-100"
           >
             <div class="block">
-              <div class="w-full font-semibold uppercase">
+              <div class="w-full font-semibold capitalize">
                 {{ $t("form.no") }}
               </div>
             </div>
@@ -152,7 +152,7 @@ export default defineComponent({
 
     <div class="form-control w-full" v-if="form.isAttending !== 'false'">
       <label class="label">
-        <span class="label-text text-[#795218]"
+        <span class="label-text text-stone-900"
           >{{ $t("form.additionalGuest") }}*</span
         >
       </label>
@@ -161,7 +161,7 @@ export default defineComponent({
           :class="`btn btn-square btn-outline rounded-sm   text-lg  ${
             form.additionalGuests === 0
               ? 'btn-disabled'
-              : 'border-[#795218] text-[#795218] hover:bg-[#795218] hover:text-white hover:border-[#795218]'
+              : 'border-stone-900 text-stone-900 hover:bg-stone-900 hover:text-white hover:border-stone-900'
           }`"
           type="button"
           @click="removeAdditionalGuest"
@@ -174,7 +174,7 @@ export default defineComponent({
           class="input input-bordered w-full bg-white rounded-sm"
         />
         <button
-          class="btn btn-square btn-outline rounded-sm border-[#795218] text-[#795218] hover:bg-[#795218] hover:text-white hover:border-[#795218] text-lg"
+          class="btn btn-square btn-outline rounded-sm border-stone-900 text-stone-900 hover:bg-stone-900 hover:text-white hover:border-stone-900 text-lg"
           type="button"
           @click="addAddtionalGuest"
         >
@@ -185,7 +185,7 @@ export default defineComponent({
 
     <div class="form-control w-full">
       <label class="label">
-        <span class="label-text text-[#795218]">{{ $t("form.comment") }}</span>
+        <span class="label-text text-stone-900">{{ $t("form.comment") }}</span>
       </label>
       <textarea
         v-model.lazy="form.comment"
@@ -194,7 +194,7 @@ export default defineComponent({
     </div>
     <div class="form-control w-full">
       <label class="label">
-        <span class="label-text text-[#795218]">Passcode*</span>
+        <span class="label-text text-stone-900">Passcode*</span>
       </label>
       <input
         v-model.lazy="form.passcode"
@@ -207,7 +207,7 @@ export default defineComponent({
       type="submit"
       :class="`${
         isLoading ? 'loading' : ''
-      } btn mt-4 btn-block rounded-sm btn-outline border border-[#795218] text-[#795218] hover:bg-[#795218] hover:text-white hover:border-[#795218]`"
+      } btn mt-4 btn-block rounded-sm btn-outline border border-stone-900 text-stone-900 hover:bg-stone-900 hover:text-white hover:border-stone-900 capitalize`"
     >
       {{ $t("form.submit") }}
     </button>

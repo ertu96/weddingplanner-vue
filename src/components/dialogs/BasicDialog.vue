@@ -33,7 +33,7 @@ export default defineComponent({
       <div class="modal-action">
         <button
           @click="systemStore.resetDialog()"
-          class="btn w-full rounded-sm"
+          class="btn w-full rounded-sm uppercase"
         >
           Ok
         </button>
