@@ -2,6 +2,7 @@
 import { Locale } from "@/enums/Locale";
 import { defineComponent } from "vue";
 import CountryButton from "../CountryButton.vue";
+import ArabicFlag from "/icons/ar.svg";
 import GermanyFlag from "/icons/de.svg";
 import GreatBritainFlag from "/icons/gb.svg";
 import JapanFlag from "/icons/jp.svg";
@@ -37,6 +38,11 @@ export default defineComponent({
         id: Locale.DE,
         country: "Deutsch",
         flag: GermanyFlag,
+      },
+      {
+        id: Locale.AR,
+        country: "العربية",
+        flag: ArabicFlag,
       },
     ],
   }),

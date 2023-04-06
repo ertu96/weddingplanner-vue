@@ -4,4 +4,5 @@ export enum Locale {
   JP = "jp",
   GB = "gb",
   DE = "de",
+  AR = "ar",
 }
