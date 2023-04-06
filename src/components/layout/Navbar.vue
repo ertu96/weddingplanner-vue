@@ -20,7 +20,10 @@ export default defineComponent({
   <header
     class="py-4 bg-white/60 backdrop-blur-xl shadow-sm flex justify-between items-center px-4"
   >
-    <div class="w-[26px]" />
+    <RouterLink to="/" v-if="$route.name !== 'home'">
+      <img src="/icons/arrow-left.svg" alt="back" width="26" />
+    </RouterLink>
+    <div class="w-[26px]" v-else />
     <RouterLink to="/">
       <div class="text-4xl">E|E</div>
     </RouterLink>
@@ -28,7 +31,7 @@ export default defineComponent({
       ><img
         :src="`/icons/${systemStore.getLocale}.svg`"
         width="26"
-        alt="German"
+        alt="Language"
     /></label>
   </header>
   <LanguageDialog />
