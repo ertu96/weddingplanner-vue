@@ -25,24 +25,25 @@ export default defineComponent({
         flag: RussiaFlag,
       },
       {
-        id: Locale.JP,
-        country: "日本語",
-        flag: JapanFlag,
+        id: Locale.AR,
+        country: "العربية",
+        flag: ArabicFlag,
       },
+
       {
         id: Locale.GB,
         country: "English",
         flag: GreatBritainFlag,
       },
       {
+        id: Locale.JP,
+        country: "日本語",
+        flag: JapanFlag,
+      },
+      {
         id: Locale.DE,
         country: "Deutsch",
         flag: GermanyFlag,
-      },
-      {
-        id: Locale.AR,
-        country: "العربية",
-        flag: ArabicFlag,
       },
     ],
   }),

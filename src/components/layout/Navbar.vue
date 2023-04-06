@@ -3,6 +3,7 @@ import { useSystemStore } from "@/stores/SystemStore";
 import { mapStores } from "pinia";
 import LanguageDialog from "../dialogs/LanguageDialog.vue";
 
+import { Locale } from "@/enums/Locale";
 import { defineComponent } from "vue";
 
 export default defineComponent({
@@ -12,6 +13,10 @@ export default defineComponent({
   },
   components: {
     LanguageDialog,
+  },
+  mounted() {
+    if (localStorage.getItem("locale") !== null)
+      this.$i18n.locale = localStorage.getItem("locale") || Locale.DE;
   },
 });
 </script>

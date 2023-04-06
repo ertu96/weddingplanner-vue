@@ -47,6 +47,7 @@ export default defineComponent({
           isAttending: this.form.isAttending,
           additionalGuests: this.form.additionalGuests,
           comment: this.form.comment,
+          locale: this.systemStore.getLocale,
         });
         this.systemStore.setDialog({
           visible: true,

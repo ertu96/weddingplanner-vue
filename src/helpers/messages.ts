@@ -1,36 +1,6 @@
-import type { Locale } from "@/enums/Locale";
+import type { Messages } from "@/interfaces/Messages";
 
-export const messages: {
-  [key in Locale]: {
-    home: {
-      greeting: string;
-      datetime: string;
-      hopeToSeeYou: string;
-      buttons: {
-        schedule: string;
-        rsvp: string;
-      };
-    };
-    form: {
-      name: string;
-      email: string;
-      rsvp: string;
-      yes: string;
-      no: string;
-      additionalGuest: string;
-      comment: string;
-      passcode: string;
-      submit: string;
-      checkInvitation: string;
-      errorMessages: {
-        name: string;
-        email: string;
-        additionalGuest: string;
-        passcode: string;
-      };
-    };
-  };
-} = {
+export const messages: Messages = {
   tr: {
     home: {
       greeting:
