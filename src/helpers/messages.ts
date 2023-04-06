@@ -1,133 +1,12 @@
 import type { Messages } from "@/interfaces/Messages";
 
 export const messages: Messages = {
-  tr: {
-    home: {
-      greeting:
-        "Merhaba,\nDüğünümüze davetlisiniz.\nKatılabileceğinizi bildirirseniz seviniriz.\n",
-      datetime: "11.06.2023 saat 17:00'de",
-      hopeToSeeYou: "Sizi görmek için sabırsızlanıyoruz!",
-      buttons: {
-        schedule: "Program",
-        rsvp: "Katılım",
-      },
-    },
-    form: {
-      name: "Ad",
-      email: "E-posta",
-      rsvp: "Katılım",
-      yes: "Evet",
-      no: "Hayır",
-      additionalGuest: "Ek misafir",
-      comment: "Açıklamalar",
-      passcode: "Şifre",
-      submit: "Gönder",
-      checkInvitation: "davetiyede yazıyor",
-      errorMessages: {
-        name: "Lütfen adınızı girin",
-        email: "Lütfen geçerli bir e-posta adresi girin",
-        additionalGuest: "Lütfen ek misafir sayısını belirtin",
-        passcode: "Lütfen şifreyi kontrol edin",
-      },
-    },
-  },
-  gb: {
-    home: {
-      greeting:
-        "Hello,\nWe cordially invite you to our wedding.\nPlease let us know if you can attend.\n",
-      datetime: "on 11 June 2023 at 5:00 PM",
-      hopeToSeeYou: "We hope to see you there!",
-      buttons: {
-        schedule: "Schedule",
-        rsvp: "RSVP",
-      },
-    },
-    form: {
-      name: "Name",
-      email: "Email",
-      rsvp: "RSVP",
-      yes: "Yes",
-      no: "No",
-      additionalGuest: "Additional Guests",
-      comment: "Comments",
-      passcode: "Passcode",
-      submit: "Submit",
-      checkInvitation: "check your invitation",
-      errorMessages: {
-        name: "Please enter your name",
-        email: "Please enter a valid email address",
-        additionalGuest: "Please indicate the number of additional guests",
-        passcode: "Please check the passcode",
-      },
-    },
-  },
-  jp: {
-    home: {
-      greeting:
-        "こんにちは、\n私たちは私たちの結婚式にあなたを招待します。\n参加できるかどうか教えてください。\n",
-      datetime: "2023年6月11日17:00",
-      hopeToSeeYou: "お会いできるのを楽しみにしています！",
-      buttons: {
-        schedule: "スケジュール",
-        rsvp: "参加登録",
-      },
-    },
-    form: {
-      name: "名前",
-      email: "メール",
-      rsvp: "出席",
-      yes: "はい",
-      no: "いいえ",
-      additionalGuest: "同伴者",
-      comment: "コメント",
-      passcode: "パスコード",
-      submit: "送信",
-      checkInvitation: "招待状を確認してください",
-      errorMessages: {
-        name: "名前を入力してください",
-        email: "有効なメールアドレスを入力してください",
-        additionalGuest: "同伴者の有無を選択してください",
-        passcode: "パスコードを確認してください",
-      },
-    },
-  },
-  ru: {
-    home: {
-      greeting:
-        "Здравствуйте,\nмы приглашаем вас на нашу свадьбу.\nПожалуйста, дайте знать, сможете ли вы присутствовать.\n",
-      datetime: "11 июня 2023 года в 17:00",
-      hopeToSeeYou: "Мы надеемся увидеть вас!",
-      buttons: {
-        schedule: "Программа",
-        rsvp: "Ответить",
-      },
-    },
-    form: {
-      name: "Имя",
-      email: "E-mail",
-      rsvp: "Присутствие",
-      yes: "Да",
-      no: "Нет",
-      additionalGuest: "Гости",
-      comment: "Комментарий",
-      passcode: "Код доступа",
-      submit: "Отправить",
-      checkInvitation: "Указано в приглашении",
-      errorMessages: {
-        name: "Пожалуйста, введите имя",
-        email: "Пожалуйста, введите действительный адрес электронной почты",
-        additionalGuest: "Пожалуйста, укажите, придут ли гости",
-        passcode: "Пожалуйста, проверьте код доступа",
-      },
-    },
-  },
-
   de: {
     home: {
       greeting:
-        "Hallo,\nwir laden euch herzlich zu unserer Hochzeit ein.\nBitte gibt Bescheid, ob ihr dran teilnehmen könnt.\n",
-      datetime: "am 11.06.2023 um 17:00",
-      hopeToSeeYou: "Wir freuen uns auf euch!",
+        "Wir laden Euch herzlich zu unserer Hochzeitsfeier ein.\nBitte gebt uns Bescheid, ob Ihr daran teilnehmen werden könnt.\n",
+      datetime: "am Sonntag, den 11.06.2023 um 17:00",
+      hopeToSeeYou: "Wir freuen uns auf Euch!",
       buttons: {
         schedule: "Programmablauf",
         rsvp: "Anmelden",
@@ -151,35 +30,198 @@ export const messages: Messages = {
         passcode: "Bitte Passcode kontrollieren",
       },
     },
+    dialog: {
+      submit: {
+        title: "Danke für deine Antwort",
+        message: "Du erhälst in Kürze eine E-Mail",
+      },
+      error: "Fehler",
+    },
+  },
+  gb: {
+    home: {
+      greeting:
+        "We warmly invite you to our wedding celebration.\nPlease let us know if you will be able to attend.\n",
+      datetime: "on Sunday, June 11th, 2023 at 5:00 PM",
+      hopeToSeeYou: "We hope to see you there!",
+      buttons: {
+        schedule: "Schedule of Events",
+        rsvp: "RSVP",
+      },
+    },
+    form: {
+      name: "Name",
+      email: "Email",
+      rsvp: "RSVP",
+      yes: "Yes",
+      no: "No",
+      additionalGuest: "Additional Guests",
+      comment: "Comments",
+      passcode: "Passcode",
+      submit: "Submit",
+      checkInvitation: "as written on your invitation",
+      errorMessages: {
+        name: "Please enter your name",
+        email: "Please enter a valid email address",
+        additionalGuest:
+          "Please indicate whether additional guests will be joining you",
+        passcode: "Please check your passcode",
+      },
+    },
+    dialog: {
+      submit: {
+        title: "Thank you for your response",
+        message: "You will receive an email shortly",
+      },
+      error: "Error",
+    },
   },
   ar: {
     home: {
       greeting:
-        "مرحبا،\nندعوكم لحضور حفل زفافنا.\nيرجى إعلامنا إذا كنتم ستحضرون.\n",
-      datetime: "يوم 11 يونيو 2023 الساعة 17:00",
+        "ندعوكم بحرارة لحضور حفل زفافنا.\nيرجى إبلاغنا إذا كنتم ستحضرون.\n",
+      datetime: "يوم الأحد الموافق 11/06/2023 الساعة 5 مساءً",
       hopeToSeeYou: "نتطلع لرؤيتكم!",
       buttons: {
-        schedule: "برنامج الحفل",
+        schedule: "جدول البرنامج",
         rsvp: "التسجيل",
       },
     },
     form: {
       name: "الاسم",
       email: "البريد الإلكتروني",
-      rsvp: "الرد",
+      rsvp: "الحضور",
       yes: "نعم",
       no: "لا",
       additionalGuest: "الضيوف الإضافيين",
       comment: "ملاحظات",
       passcode: "رمز المرور",
       submit: "إرسال",
-      checkInvitation: "يمكن العثور عليه في الدعوة",
+      checkInvitation: "موجود على الدعوة",
       errorMessages: {
         name: "يرجى إدخال الاسم",
-        email: "يرجى إدخال عنوان بريد إلكتروني صالح",
-        additionalGuest: "يرجى تحديد ما إذا كانت هناك ضيوف إضافيين",
+        email: "يرجى إدخال عنوان بريد إلكتروني صحيح",
+        additionalGuest: "يرجى تحديد ما إذا كان هناك ضيوف إضافيون سيحضرون",
         passcode: "يرجى التحقق من رمز المرور",
       },
+    },
+    dialog: {
+      submit: {
+        title: "شكرًا على إجابتك",
+        message: "سوف تتلقى بالقريب العاجل رسالة بريد إلكتروني",
+      },
+      error: "خطأ",
+    },
+  },
+  jp: {
+    home: {
+      greeting:
+        "私たちは、私たちの結婚式にあなたを心から招待します。\n参加できるかどう",
+      datetime: "2023年6月11日（日）17:00",
+      hopeToSeeYou: "あなたに会えるのを楽しみにしています！",
+      buttons: {
+        schedule: "スケジュール",
+        rsvp: "参加表明",
+      },
+    },
+    form: {
+      name: "名前",
+      email: "メールアドレス",
+      rsvp: "出席の返信",
+      yes: "はい",
+      no: "いいえ",
+      additionalGuest: "追加のゲスト",
+      comment: "コメント",
+      passcode: "パスコード",
+      submit: "送信",
+      checkInvitation: "招待状を確認してください",
+      errorMessages: {
+        name: "名前を入力してください",
+        email: "有効なメールアドレスを入力してください",
+        additionalGuest: "追加のゲストがいるかどうかを教えてください",
+        passcode: "パスコードを確認してください",
+      },
+    },
+    dialog: {
+      submit: {
+        title: "ご返信ありがとうございます",
+        message: "返信が確認されました。追ってメールにてご連絡いたします。",
+      },
+      error: "エラー",
+    },
+  },
+  tr: {
+    home: {
+      greeting:
+        "Düğün törenimize katılmaya davet ediyoruz.\nKatılım durumunuzu bize bildirmenizi rica ederiz.\n",
+      datetime: "11.06.2023 Pazar, saat 17:00'de",
+      hopeToSeeYou: "Sizleri görmekten mutluluk duyacağız!",
+      buttons: {
+        schedule: "Program",
+        rsvp: "Katıl",
+      },
+    },
+    form: {
+      name: "İsim",
+      email: "E-Posta",
+      rsvp: "Katılım",
+      yes: "Evet",
+      no: "Hayır",
+      additionalGuest: "Ek misafir sayısı",
+      comment: "Yorumlar",
+      passcode: "Parola",
+      submit: "Gönder",
+      checkInvitation: "davetiye üzerinde yazmaktadır",
+      errorMessages: {
+        name: "Lütfen isim giriniz",
+        email: "Lütfen geçerli bir e-posta adresi giriniz",
+        additionalGuest: "Lütfen ek misafir sayısı belirtiniz",
+        passcode: "Lütfen parolayı kontrol ediniz",
+      },
+    },
+    dialog: {
+      submit: {
+        title: "Cevabınız için teşekkür ederiz",
+        message: "En kısa sürede bir e-posta alacaksınız",
+      },
+      error: "Hata",
+    },
+  },
+  ru: {
+    home: {
+      greeting:
+        "Мы сердечно приглашаем вас на нашу свадьбу.\nПожалуйста, сообщите нам, сможете ли вы присутствовать.\n",
+      datetime: "в воскресенье, 11.06.2023 в 17:00",
+      hopeToSeeYou: "Мы с нетерпением ждем встречи с вами!",
+      buttons: {
+        schedule: "Расписание",
+        rsvp: "Ответить на приглашение",
+      },
+    },
+    form: {
+      name: "Имя",
+      email: "Электронная почта",
+      rsvp: "Ответ",
+      yes: "Да",
+      no: "Нет",
+      additionalGuest: "Дополнительные гости",
+      comment: "Комментарий",
+      passcode: "Код доступа",
+      submit: "Отправить",
+      checkInvitation: "указан в приглашении",
+      errorMessages: {
+        name: "Пожалуйста, введите имя",
+        email: "Пожалуйста, введите действительный адрес электронной почты",
+        additionalGuest: "Пожалуйста, укажите, будут ли еще гости",
+        passcode: "Пожалуйста, проверьте код доступа",
+      },
+    },
+    dialog: {
+      submit: {
+        title: "Спасибо за ваш ответ",
+        message: "Вы получите письмо в ближайшее время.",
+      },
+      error: "Ошибка",
     },
   },
 };

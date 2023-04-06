@@ -78,7 +78,7 @@ export default defineComponent({
 
 <template>
   <form
-    class="mx-auto flex flex-col items-center gap-2"
+    class="mx-auto flex flex-col items-center gap-2 p-8"
     :onSubmit="submit"
     action=""
   >

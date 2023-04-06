@@ -43,15 +43,17 @@ export default defineComponent({
 </script>
 
 <template>
-  <h1 class="text-center text-2xl mb-6">{{ $t("home.buttons.schedule") }}</h1>
-  <ul>
-    <li
-      v-for="(scheduleItem, index) in schedule"
-      :key="index"
-      class="flex justify-between"
-    >
-      <p>{{ scheduleItem.time }}</p>
-      <p>{{ scheduleItem.title }}</p>
-    </li>
-  </ul>
+  <div class="p-8">
+    <h1 class="text-center text-2xl mb-6">{{ $t("home.buttons.schedule") }}</h1>
+    <ul>
+      <li
+        v-for="(scheduleItem, index) in schedule"
+        :key="index"
+        class="flex justify-between"
+      >
+        <p>{{ scheduleItem.time }}</p>
+        <p>{{ scheduleItem.title }}</p>
+      </li>
+    </ul>
+  </div>
 </template>

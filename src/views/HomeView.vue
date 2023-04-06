@@ -1,5 +1,24 @@
+<script lang="ts">
+import { useSystemStore } from "@/stores/SystemStore";
+
+import { mapStores } from "pinia";
+import { defineComponent } from "vue";
+
+export default defineComponent({
+  name: "HomeView",
+  computed: {
+    ...mapStores(useSystemStore),
+  },
+});
+</script>
+
 <template>
-  <div>
+  <img
+    :src="`/welcome-banner/welcome-${systemStore.getLocale}.png`"
+    alt="Welcome"
+    class="py-4"
+  />
+  <div class="px-8 pb-8">
     <p class="whitespace-pre-line">
       {{ $t("home.greeting") }}
     </p>

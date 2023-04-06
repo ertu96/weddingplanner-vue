@@ -29,5 +29,12 @@ export type Messages = {
         passcode: string;
       };
     };
+    dialog: {
+      submit: {
+        title: string;
+        message: string;
+      };
+      error: string;
+    };
   };
 };
