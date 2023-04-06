@@ -90,6 +90,7 @@ export default defineComponent({
         v-model.lazy="form.name"
         type="text"
         class="input input-bordered w-full bg-white rounded-sm"
+        autocomplete="name"
       />
     </div>
     <div class="form-control w-full">
@@ -100,6 +101,7 @@ export default defineComponent({
         v-model.lazy.trim="form.email"
         type="text"
         class="input input-bordered w-full bg-white rounded-sm"
+        autocomplete="email"
       />
     </div>
     <div class="form-control w-full">
