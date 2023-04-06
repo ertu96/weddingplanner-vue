@@ -33,7 +33,7 @@ export default defineComponent({
 </script>
 
 <template>
-  <label for="language-modal" @click="changeLanguage">
+  <label for="language-modal" @click="changeLanguage" class="cursor-pointer">
     <img :src="flag" :alt="country" class="rounded-sm" />
     <p class="text-center mt-1">{{ country }}</p>
   </label>

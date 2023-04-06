@@ -43,7 +43,7 @@ export default defineComponent({
   components: { CountryButton },
   mounted() {
     setTimeout(() => {
-      this.open = true;
+      if (localStorage.getItem("locale") === null) this.open = true;
     }, 3000);
   },
 });
