@@ -1,4 +1,36 @@
-export const messages = {
+import type { Locale } from "@/enums/Locale";
+
+export const messages: {
+  [key in Locale]: {
+    home: {
+      greeting: string;
+      datetime: string;
+      hopeToSeeYou: string;
+      buttons: {
+        schedule: string;
+        rsvp: string;
+      };
+    };
+    form: {
+      name: string;
+      email: string;
+      rsvp: string;
+      yes: string;
+      no: string;
+      additionalGuest: string;
+      comment: string;
+      passcode: string;
+      submit: string;
+      checkInvitation: string;
+      errorMessages: {
+        name: string;
+        email: string;
+        additionalGuest: string;
+        passcode: string;
+      };
+    };
+  };
+} = {
   tr: {
     home: {
       greeting:
@@ -29,7 +61,7 @@ export const messages = {
       },
     },
   },
-  en: {
+  gb: {
     home: {
       greeting:
         "Hello,\nWe cordially invite you to our wedding.\nPlease let us know if you can attend.\n",

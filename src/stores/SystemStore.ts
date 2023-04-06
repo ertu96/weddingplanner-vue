@@ -4,10 +4,9 @@ import { defineStore } from "pinia";
 
 export const useSystemStore = defineStore("system", {
   state: () => ({
-    locale:
-      localStorage.getItem("locale") !== null
-        ? localStorage.getItem("locale")
-        : (Locale.DE as Locale),
+    locale: (localStorage.getItem("locale") !== null
+      ? localStorage.getItem("locale")
+      : Locale.DE) as Locale,
     dialog: {
       visible: false,
       title: "",
