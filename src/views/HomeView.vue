@@ -6,6 +6,9 @@ import { defineComponent } from "vue";
 
 export default defineComponent({
   name: "HomeView",
+  data: () => ({
+    googleDriveUrl: import.meta.env.VITE_GOOGLE_DRIVE_URL,
+  }),
   computed: {
     ...mapStores(useSystemStore),
   },
@@ -45,7 +48,7 @@ export default defineComponent({
         {{ $t("home.buttons.rsvp") }}
       </RouterLink>
       <a
-        href="https://drive.g"
+        :href="googleDriveUrl"
         target="_blank"
         rel="noreferrer"
         class="btn rounded-sm btn-ghost border border-stone-900 text-stone-900 hover:bg-stone-900 hover:text-white hover:border-stone-900 btn-block capitalize"
