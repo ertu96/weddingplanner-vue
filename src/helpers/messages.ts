@@ -9,7 +9,7 @@ export const messages: Messages = {
       hopeToSeeYou: "Wir freuen uns auf Euch!",
       buttons: {
         schedule: "Programmablauf",
-        rsvp: "Anmelden",
+        rsvp: "Teilnehmen",
       },
     },
     form: {
@@ -46,17 +46,17 @@ export const messages: Messages = {
       hopeToSeeYou: "We hope to see you there!",
       buttons: {
         schedule: "Schedule of Events",
-        rsvp: "RSVP",
+        rsvp: "Attend",
       },
     },
     form: {
       name: "Name",
       email: "Email",
-      rsvp: "RSVP",
+      rsvp: "Attending",
       yes: "Yes",
       no: "No",
       additionalGuest: "Additional Guests",
-      comment: "Comments",
+      comment: "Comment",
       passcode: "Passcode",
       submit: "Submit",
       checkInvitation: "as written on your invitation",
@@ -155,7 +155,7 @@ export const messages: Messages = {
       greeting:
         "Düğün törenimize katılmaya davet ediyoruz.\nKatılım durumunuzu bize bildirmenizi rica ederiz.\n",
       datetime: "11.06.2023 Pazar, saat 17:00'de",
-      hopeToSeeYou: "Sizleri görmekten mutluluk duyacağız!",
+      hopeToSeeYou: "Katılımınızı dört gözle bekliyoruz",
       buttons: {
         schedule: "Program",
         rsvp: "Katıl",
@@ -167,7 +167,7 @@ export const messages: Messages = {
       rsvp: "Katılım",
       yes: "Evet",
       no: "Hayır",
-      additionalGuest: "Ek misafir sayısı",
+      additionalGuest: "Ek misafir",
       comment: "Yorumlar",
       passcode: "Parola",
       submit: "Gönder",
