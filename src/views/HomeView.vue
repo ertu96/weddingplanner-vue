@@ -53,7 +53,7 @@ export default defineComponent({
         rel="noreferrer"
         class="btn rounded-sm btn-ghost border border-stone-900 text-stone-900 hover:bg-stone-900 hover:text-white hover:border-stone-900 btn-block capitalize"
       >
-        Google Drive
+        Google Photos
       </a>
     </div>
   </div>
