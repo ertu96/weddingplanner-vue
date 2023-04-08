@@ -32,7 +32,7 @@ export default defineComponent({
     <RouterLink to="/">
       <div class="text-4xl">E|E</div>
     </RouterLink>
-    <label for="language-modal"
+    <label for="language-modal" class="cursor-pointer"
       ><img
         :src="`/icons/${systemStore.getLocale}.svg`"
         width="26"
