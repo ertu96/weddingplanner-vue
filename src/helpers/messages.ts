@@ -97,7 +97,7 @@ export const messages: Messages = {
       greeting:
         "ندعوكم بحرارة لحضور حفل زفافنا.\nيرجى إبلاغنا إذا كنتم ستحضرون.\n",
       datetime: "يوم الأحد الموافق 11/06/2023 الساعة 5 مساءً",
-      hopeToSeeYou: "نتطلع لرؤيتكم!",
+      hopeToSeeYou: "ونحن نتطلع إلى رؤيتكم",
       buttons: {
         schedule: "جدول البرنامج",
         rsvp: "التسجيل",
@@ -187,7 +187,7 @@ export const messages: Messages = {
       greeting:
         "Düğün törenimize katılmaya davet ediyoruz.\nKatılım durumunuzu bize bildirmenizi rica ederiz.\n",
       datetime: "11.06.2023 Pazar, saat 17:00'de",
-      hopeToSeeYou: "Katılımınızı dört gözle bekliyoruz",
+      hopeToSeeYou: "Sizleri dört gözle bekliyoruz",
       buttons: {
         schedule: "Program",
         rsvp: "Katıl",
@@ -230,11 +230,11 @@ export const messages: Messages = {
   ru: {
     home: {
       greeting:
-        "Мы сердечно приглашаем вас на нашу свадьбу.\nПожалуйста, сообщите нам, сможете ли вы присутствовать.\n",
+        "мы женимся и приглашаем вас на наше свадебное торжество. Пожалуйста, дайте нам знать, сможете ли вы присутствовать",
       datetime: "в воскресенье, 11.06.2023 в 17:00",
-      hopeToSeeYou: "Мы с нетерпением ждем встречи с вами!",
+      hopeToSeeYou: "Мы будем рады приветствовать вас!",
       buttons: {
-        schedule: "Расписание",
+        schedule: "программа",
         rsvp: "Ответить на приглашение",
       },
     },
