@@ -37,6 +37,14 @@ export const messages: Messages = {
       },
       error: "Fehler",
     },
+    schedule: {
+      start: "Beginn",
+      greeting: "Begrüßung",
+      food: "Abendessen",
+      games: "Spiele",
+      cake: "Torte",
+      dance: "Tanz",
+    },
   },
   gb: {
     home: {
@@ -75,6 +83,14 @@ export const messages: Messages = {
       },
       error: "Error",
     },
+    schedule: {
+      start: "Start",
+      greeting: "Greeting",
+      food: "Dinner",
+      games: "Games",
+      cake: "Cake",
+      dance: "Dance",
+    },
   },
   ar: {
     home: {
@@ -111,6 +127,14 @@ export const messages: Messages = {
         message: "سوف تتلقى بالقريب العاجل رسالة بريد إلكتروني",
       },
       error: "خطأ",
+    },
+    schedule: {
+      start: "بداية",
+      greeting: "تحية",
+      food: "الطعام",
+      games: "الألعاب",
+      cake: "الكعك",
+      dance: "الرقص",
     },
   },
   jp: {
@@ -149,6 +173,14 @@ export const messages: Messages = {
       },
       error: "エラー",
     },
+    schedule: {
+      start: "開始",
+      greeting: "挨拶",
+      food: "食事",
+      games: "ゲーム",
+      cake: "ケーキ",
+      dance: "ダンス",
+    },
   },
   tr: {
     home: {
@@ -186,6 +218,14 @@ export const messages: Messages = {
       },
       error: "Hata",
     },
+    schedule: {
+      start: "Başlangıç",
+      greeting: "Selamlaşma",
+      food: "Akşam Yemeği",
+      games: "Oyunlar",
+      cake: "Pasta",
+      dance: "Dans",
+    },
   },
   ru: {
     home: {
@@ -222,6 +262,14 @@ export const messages: Messages = {
         message: "Вы получите письмо в ближайшее время.",
       },
       error: "Ошибка",
+    },
+    schedule: {
+      start: "Начало",
+      greeting: "Приветствие",
+      food: "ужин",
+      games: "Игры",
+      cake: "Торт",
+      dance: "Танцы",
     },
   },
 };

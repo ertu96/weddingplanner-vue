@@ -36,5 +36,13 @@ export type Messages = {
       };
       error: string;
     };
+    schedule: {
+      start: string;
+      greeting: string;
+      food: string;
+      games: string;
+      cake: string;
+      dance: string;
+    };
   };
 };
