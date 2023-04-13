@@ -1,4 +1,5 @@
 <script lang="ts">
+import { messages } from "@/helpers/messages";
 import validate from "@/helpers/validator";
 import { useSystemStore } from "@/stores/SystemStore";
 import axios from "axios";
@@ -51,8 +52,8 @@ export default defineComponent({
         });
         this.systemStore.setDialog({
           visible: true,
-          title: "Danke für deine Antwort!",
-          content: "Du erhälst in Kürze eine E-Mail",
+          title: messages[this.systemStore.getLocale].dialog.submit.title,
+          content: messages[this.systemStore.getLocale].dialog.submit.message,
         });
         this.form = {
           name: "",
@@ -66,7 +67,9 @@ export default defineComponent({
         this.systemStore.setDialog({
           visible: true,
           title: "",
-          content: error.response ? error.response.data.message : "Fehler",
+          content: error.response
+            ? error.response.data.message
+            : messages[this.systemStore.getLocale].dialog.error,
         });
       } finally {
         this.isLoading = false;
