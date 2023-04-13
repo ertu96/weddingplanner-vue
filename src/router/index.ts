@@ -20,6 +20,9 @@ const router = createRouter({
       component: () => import("@/views/ScheduleView.vue"),
     },
   ],
+  scrollBehavior() {
+    return { top: 0 };
+  },
 });
 
 export default router;
