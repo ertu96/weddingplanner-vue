@@ -19,6 +19,11 @@ const router = createRouter({
       name: "schedule",
       component: () => import("@/views/ScheduleView.vue"),
     },
+    {
+      path: "/guests",
+      name: "guests",
+      component: () => import("@/views/GuestsView.vue"),
+    },
   ],
   scrollBehavior() {
     return { top: 0 };
