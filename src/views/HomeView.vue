@@ -1,4 +1,5 @@
 <script lang="ts">
+import router from "@/router";
 import { useSystemStore } from "@/stores/SystemStore";
 
 import { mapStores } from "pinia";
@@ -11,6 +12,9 @@ export default defineComponent({
   }),
   computed: {
     ...mapStores(useSystemStore),
+  },
+  mounted() {
+    router.push({ name: "share" });
   },
 });
 </script>

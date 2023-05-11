@@ -10,6 +10,11 @@ const router = createRouter({
       component: HomeView,
     },
     {
+      path: "/share",
+      name: "share",
+      component: () => import("@/views/ShareView.vue"),
+    },
+    {
       path: "/sign",
       name: "sign",
       component: () => import("@/views/SignView.vue"),

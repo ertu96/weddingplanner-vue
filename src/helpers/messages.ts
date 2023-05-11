@@ -45,6 +45,11 @@ export const messages: Messages = {
       cake: "Torte",
       dance: "Tanz",
     },
+    share: {
+      thanks: "Vielen Dank!",
+      message:
+        "Wir bedanken uns herzlich, dass du mit dabei warst.\n\nDeine Fotos und Videos kannst du gerne hier mit uns teilen.",
+    },
   },
   gb: {
     home: {
@@ -90,6 +95,11 @@ export const messages: Messages = {
       games: "Games",
       cake: "Cake",
       dance: "Dance",
+    },
+    share: {
+      thanks: "Thank you very much!",
+      message:
+        "We thank you warmly for being with us.\n\nYou can share your photos and videos with us here.",
     },
   },
   ar: {
@@ -137,6 +147,11 @@ export const messages: Messages = {
       cake: "الكعك",
       dance: "الرقص",
     },
+    share: {
+      thanks: "شكرًا جزيلاً لك!",
+      message:
+        "نحن نشكركم بحرارة على وجودكم معنا.\n\nيمكنك مشاركة صورك ومقاطع الفيديو الخاصة بك معنا هنا.",
+    },
   },
   jp: {
     home: {
@@ -181,6 +196,11 @@ export const messages: Messages = {
       games: "ゲーム",
       cake: "ケーキ",
       dance: "ダンス",
+    },
+    share: {
+      thanks: "ありがとうございました！",
+      message:
+        "ご参加いただき、ありがとうございました。\n\nこちらで写真や動画を共有していただけます。",
     },
   },
   tr: {
@@ -227,6 +247,11 @@ export const messages: Messages = {
       cake: "Pasta",
       dance: "Dans",
     },
+    share: {
+      thanks: "Çok teşekkür ederiz!",
+      message:
+        "Bizimle olduğunuz için teşekkürlerimizi sunarız.\n\nFotoğraflarınızı ve videolarınızı burada bizimle paylaşabilirsiniz.",
+    },
   },
   ru: {
     home: {
@@ -271,6 +296,11 @@ export const messages: Messages = {
       games: "Игры",
       cake: "Торт",
       dance: "Танцы",
+    },
+    share: {
+      thanks: "Большое спасибо!",
+      message:
+        "Мы искренне благодарим вас за участие.\n\nВы можете поделиться с нами своими фотографиями и видео здесь.",
     },
   },
 };

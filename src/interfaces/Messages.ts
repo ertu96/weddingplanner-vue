@@ -44,5 +44,9 @@ export type Messages = {
       cake: string;
       dance: string;
     };
+    share: {
+      thanks: string;
+      message: string;
+    };
   };
 };
